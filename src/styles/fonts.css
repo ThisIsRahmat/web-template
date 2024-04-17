@@ -1,0 +1,28 @@
+/* File: font.css */
+@font-face {
+    font-family: 'NORD'; 
+    src: local('NORD'),
+         url('../fonts/NORD/Nord-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'OtenticSignature'; 
+    src: local('OtenticSignature'),
+         url('../fonts/OtenticSignature/Otentic.ttf') format('woff'),
+         url('../fonts/OtenticSignature/OtenticAlt.ttf') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'GTAmericaMonoRegular';  
+    src: local('GTAmericaMonoRegular'),
+         url('../fonts/GTAmericaMonoRegular/GT-America-Mono-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'GTAmericaMonoExtra';  
+    src: local('GTAmericaMonoExtra'),
+         url('../fonts/GTAmericaMonoExtra/GT-America-Mono-Regular-Italic.woff') format('woff'),
+         url('../fonts/GTAmericaMonoExtra/GT-America-Mono-Bold.woff') format('woff'),
+         url('../fonts/GTAmericaMonoExtra/GT-America-Mono-Bold-Italic.woff') format('woff');
+  }
+  

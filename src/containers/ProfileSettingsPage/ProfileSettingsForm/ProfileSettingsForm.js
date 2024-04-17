@@ -100,6 +100,22 @@ class ProfileSettingsFormComponent extends Component {
           });
           const lastNameRequired = validators.required(lastNameRequiredMessage);
 
+
+               // Pronouns
+               const pronounsLabel = 'Pronouns'
+              const pronounsPlaceholder = 'she/her'
+
+              const pronounsRequiredMessage = 'Pronouns are required'
+              const pronounsRequired = validators.required(pronounsRequiredMessage);
+
+                  // Astrological Sign 
+                  const astrologicalSignLabel = 'Astrological Sign '
+
+                  const astrologicalSignPlaceholder = 'Scorpio'
+                  const astrologicalSignRequiredMessage = 'Astrological sign is required'
+                  const astrologicalSignRequired = validators.required(astrologicalSignRequiredMessage);
+    
+              
           // Bio
           const bioLabel = intl.formatMessage({
             id: 'ProfileSettingsForm.bioLabel',
@@ -288,6 +304,43 @@ class ProfileSettingsFormComponent extends Component {
                     validate={lastNameRequired}
                   />
                 </div>
+                
+              </div>
+              <div className={css.sectionContainer}>
+                <H4 as="h2" className={css.sectionTitle}>
+                 Pronouns
+                </H4>
+                <div className={css.pronounsContainer}>
+             
+                  <FieldTextInput
+                    className={css.lastName}
+                    type="text"
+                    id="pronouns"
+                    name="pronouns"
+                    label={pronounsLabel}
+                    placeholder={pronounsPlaceholder}
+                    validate={pronounsRequired}
+                  />
+                </div>
+                
+              </div>
+              <div className={css.sectionContainer}>
+                <H4 as="h2" className={css.sectionTitle}>
+                  Astrological Sign
+                </H4>
+                <div className={css.pronounsContainer}>
+             
+                  <FieldTextInput
+                    className={css.lastName}
+                    type="text"
+                    id="astrologicalsign"
+                    name="astrologicalsign"
+                    label={astrologicalSignLabel}
+                    placeholder={astrologicalSignPlaceholder}
+                    validate={astrologicalSignRequired}
+                  />
+                </div>
+                
               </div>
               <div className={classNames(css.sectionContainer, css.lastSection)}>
                 <H4 as="h2" className={css.sectionTitle}>
@@ -300,6 +353,7 @@ class ProfileSettingsFormComponent extends Component {
                   label={bioLabel}
                   placeholder={bioPlaceholder}
                 />
+                
                 <p className={css.bioInfo}>
                   <FormattedMessage id="ProfileSettingsForm.bioInfo" values={{ marketplaceName }} />
                 </p>

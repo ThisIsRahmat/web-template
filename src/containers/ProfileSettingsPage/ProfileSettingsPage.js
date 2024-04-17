@@ -42,7 +42,7 @@ export const ProfileSettingsPageComponent = props => {
   } = props;
 
   const handleSubmit = values => {
-    const { firstName, lastName, bio: rawBio } = values;
+    const { firstName, lastName, pronouns, astrologicalSign,  bio: rawBio } = values;
 
     // Ensure that the optional bio is a string
     const bio = rawBio || '';
@@ -50,6 +50,8 @@ export const ProfileSettingsPageComponent = props => {
     const profile = {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
+      pronouns,
+      astrologicalSign,
       bio,
     };
     const uploadedImage = props.image;
@@ -64,7 +66,7 @@ export const ProfileSettingsPageComponent = props => {
   };
 
   const user = ensureCurrentUser(currentUser);
-  const { firstName, lastName, bio } = user.attributes.profile;
+  const { firstName, lastName, pronouns, astrologicalSign, bio } = user.attributes.profile;
   const profileImageId = user.profileImage ? user.profileImage.id : null;
   const profileImage = image || { imageId: profileImageId };
 
