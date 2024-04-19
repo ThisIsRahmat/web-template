@@ -39,6 +39,10 @@
   --colorBannedLight: var(--marketplaceColorLight);
   --colorBannedDark: var(--marketplaceColor);
 
+  /* Red Color taken from modernRebel's site */
+  
+  --colorRed: #FF3200;
+
   /* B&W and Grey palette */
 
   --colorWhite: hsl(0 0% 100%);
@@ -60,7 +64,7 @@
 
   
 
-  --fontFamily:  'GTAmericaMonoRegular', -apple-system, BlinkMacSystemFont, 'Inter', Helvetica, Arial, sans-serif,
+  --fontFamily:  'Roboto', -apple-system, BlinkMacSystemFont, 'Inter', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   --fontWeightRegular: 400;
@@ -234,6 +238,8 @@ a:hover {
   cursor: pointer;
 }
 
+
+
 h1 {
   font-size: 24px;
   line-height: 24px;
@@ -242,6 +248,8 @@ h1 {
   /* margin-top + n * line-height + margin-bottom => x * 6px */
   margin-top: 18px;
   margin-bottom: 18px;
+  font-family: 'NORD';
+  color: #FF3200;
 
   @media (--viewportMedium) {
     font-size: 64px;
@@ -257,6 +265,8 @@ h2 {
   font-size: 21px;
   line-height: 24px;
   font-weight: var(--fontWeightBold);
+  font-family: 'NORD';
+  color: #FF3200;
 
   padding: 4px 0 2px 0;
   /* x * 6px */
@@ -277,6 +287,9 @@ h3 {
   font-weight: var(--fontWeightBold);
   font-size: 18px;
   line-height: 24px;
+  font-family: 'NORD';
+  color: #FF3200;
+  
   /* x * 6px */
   margin-top: 18px;
   margin-bottom: 12px;

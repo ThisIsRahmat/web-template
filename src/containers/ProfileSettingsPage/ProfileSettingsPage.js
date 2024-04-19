@@ -45,7 +45,7 @@ export const ProfileSettingsPageComponent = props => {
   const { userFields } = config.user;
 
   const handleSubmit = (values, userType) => {
-    const { firstName, lastName, pronouns, astrologicalSign,  bio: rawBio, ...rest } = values;
+    const { firstName, lastName,  bio: rawBio, ...rest} = values;
 
     // Ensure that the optional bio is a string
     const bio = rawBio || '';
@@ -54,15 +54,7 @@ export const ProfileSettingsPageComponent = props => {
       firstName: firstName.trim(),
       lastName: lastName.trim(),
       bio,
-      publicData: {
-        ...pickUserFieldsData(rest, 'public', userType, userFields),
-      },
-      protectedData: {
-        ...pickUserFieldsData(rest, 'protected', userType, userFields),
-      },
-      privateData: {
-        ...pickUserFieldsData(rest, 'private', userType, userFields),
-      },
+      publicData,
     };
     const uploadedImage = props.image;
 
@@ -72,6 +64,10 @@ export const ProfileSettingsPageComponent = props => {
         ? { ...profile, profileImageId: uploadedImage.imageId }
         : profile;
 
+        console.log("Sending updated profile:", updatedValues.publicData.astrologicalSign
+      );
+onUpdateProfile(updatedValues);
+
     onUpdateProfile(updatedValues);
   };
 
@@ -79,10 +75,8 @@ export const ProfileSettingsPageComponent = props => {
   const {
     firstName,
     lastName,
-    pronouns, astrologicalSign, bio,
+    bio,
     publicData,
-    protectedData,
-    privateData,
   } = user?.attributes.profile;
   const { userType } = publicData || {};
   const profileImageId = user.profileImage ? user.profileImage.id : null;
@@ -97,9 +91,9 @@ export const ProfileSettingsPageComponent = props => {
         lastName,
         bio,
         profileImage: user.profileImage,
-        ...initialValuesForUserFields(publicData, 'public', userType, userFields),
-        ...initialValuesForUserFields(protectedData, 'protected', userType, userFields),
-        ...initialValuesForUserFields(privateData, 'private', userType, userFields),
+        publicData,
+        // astrologicalSign: user.publicData.astrologicalSign,
+        // ...initialValuesForUserFields(publicData, 'public', userType, userFields),
       }}
       profileImage={profileImage}
       onImageUpload={e => onImageUploadHandler(e, onImageUpload)}

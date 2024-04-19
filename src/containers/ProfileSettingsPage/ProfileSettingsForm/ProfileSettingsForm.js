@@ -81,6 +81,7 @@ class ProfileSettingsFormComponent extends Component {
           } = fieldRenderProps;
 
           const user = ensureCurrentUser(currentUser);
+          // const publicData = 
 
           // First name
           const firstNameLabel = intl.formatMessage({
@@ -333,6 +334,7 @@ class ProfileSettingsFormComponent extends Component {
                     label={pronounsLabel}
                     placeholder={pronounsPlaceholder}
                     validate={pronounsRequired}
+                    // initialValue={publicData?.pronouns || ""}
                   />
                 </div>
                 
@@ -346,11 +348,12 @@ class ProfileSettingsFormComponent extends Component {
                   <FieldTextInput
                     className={css.lastName}
                     type="text"
-                    id="astrologicalsign"
-                    name="astrologicalsign"
+                    id="astrologicalSign"
+                    name="astrologicalSign"
                     label={astrologicalSignLabel}
                     placeholder={astrologicalSignPlaceholder}
                     validate={astrologicalSignRequired}
+                    // initialValue={publicData?.astrologicalSign || ""} 
                   />
                 </div>
                 
