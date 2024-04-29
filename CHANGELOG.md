@@ -14,6 +14,46 @@ way to update this template, but currently, we follow a pattern:
 
 ## Upcoming version 2024-XX-XX
 
+- [add] Update translations for de.json, es.json, and fr.json.
+  [#374](https://github.com/sharetribe/web-template/pull/374)
+- [change] Update one copy text.
+  [#373](https://github.com/sharetribe/web-template/pull/373)
+- [change] EditListingDetailsForm: pass categoryLevel as argument to translations.
+  [#372](https://github.com/sharetribe/web-template/pull/372)
+- [fix] Fix: when changing categories, clear previously saved ones
+  [#371](https://github.com/sharetribe/web-template/pull/371)
+- [fix] util/search.js: fix pickInitialValuesForFieldSelectTree.
+  [#369](https://github.com/sharetribe/web-template/pull/369)
+
+## [v5.0.0] 2024-04-23
+
+This major release prepares the codebase for the new concepts: user fields and categories. The
+biggest changes are on PRs: #314 and #337.
+
+Note: We will also introduce user types later on, but that concept might still change a bit from
+what we have in this release.
+
+- [add] Add support for hosted category configuration
+
+  - Prepare for a future asset: listing-categories.json
+  - Prepare for a future changes to assets: listing-search.json and listing-fields.json
+  - Collect (nested) category info on EditListingDetailsPanel
+    - Saved to publicData as categoryLevel1, categoryLelvel2, categoryLevel3.
+    - Allow listing fields to be limited to categories in addition to listing types.
+  - Show listing fields on the ListingPage (category restrictions apply)
+  - Show category filter on the SearchPage
+  - Show listing fields on the SearchPage if category restrictions allow
+
+  [#314](https://github.com/sharetribe/web-template/pull/314)
+
+- [change] Fix a typo in translation keys.
+  [#365](https://github.com/sharetribe/web-template/pull/365)
+- [change] Update browserlist-db aka caniuse-lite.
+  [#363](https://github.com/sharetribe/web-template/pull/363)
+- [change] Update moment-timezone library to v0.5.45
+  [#362](https://github.com/sharetribe/web-template/pull/362)
+- [add] Update translations for de.json, es.json, and fr.json.
+  [#361](https://github.com/sharetribe/web-template/pull/361)
 - [add] Add support for user fields, which will be released later as a new hosted asset.
 
   - The hosted asset will support enums, multi-enums, and text fields in the same manner as listing
@@ -23,7 +63,7 @@ way to update this template, but currently, we follow a pattern:
   - The ProfileSettingsPage is the default location for adding or editing user fields.
   - The AuthenticationPage (SignupForm and ConfirmSignupForm) can also collect user field data.
 
-  [#377](https://github.com/sharetribe/web-template/pull/337)
+  [#337](https://github.com/sharetribe/web-template/pull/337)
 
 - [change] Update Node.js version to >= 18.20.1 (engine) 20.12.1 (circleci)
   [#360](https://github.com/sharetribe/web-template/pull/360)
@@ -39,6 +79,8 @@ way to update this template, but currently, we follow a pattern:
   [#353](https://github.com/sharetribe/web-template/pull/353)
 - [fix] Some email templates were not using the correct helper to format currencies and dates based
   on localization. [#351](https://github.com/sharetribe/web-template/pull/351)
+
+  [v5.0.0]: https://github.com/sharetribe/web-template/compare/v4.1.2...v5.0.0
 
 ## [v4.1.2] 2024-03-26
 
