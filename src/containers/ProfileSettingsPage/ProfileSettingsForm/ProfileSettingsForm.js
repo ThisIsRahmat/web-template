@@ -320,6 +320,14 @@ class ProfileSettingsFormComponent extends Component {
                 </div>
                 
               </div>
+
+              <CustomExtendedDataField {...fieldProps} />
+
+              <div className={classNames(css.sectionContainer)}>
+                {userFieldProps.map(fieldProps => (
+                  <CustomExtendedDataField {...fieldProps} />
+                ))}
+              </div>
               <div className={classNames(css.sectionContainer)}>
                 {userFieldProps.map(fieldProps => (
                   <CustomExtendedDataField {...fieldProps} />
