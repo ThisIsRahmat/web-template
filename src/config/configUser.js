@@ -37,125 +37,59 @@
  */
 export const userFields = [
   {
-    key: 'cuisine',
+    key: 'astrological_sign',
     scope: 'public',
     schemaType: 'enum',
     enumOptions: [
-      { option: 'italian', label: 'Italian' },
-      { option: 'chinese', label: 'Chinese' },
-      { option: 'thai', label: 'Thai' },
+      { option: 'Aries', label: 'Aries' },
+      { option: 'Taurus', label: 'Taurus' },
+      { option: 'Gemini', label: 'Gemini' },
+      { option: 'Cancer', label: 'Cancer' },
+      { option: 'Leo', label: 'Leo' },
+      { option: 'Virgo', label: 'Virgo' },
+      { option: 'Libra', label: 'Libra' },
+      { option: 'Scorpio', label: 'Scropio' },
+      { option: 'Sagittarius', label: 'Sagittarius' },
+      { option: 'Capricorn', label: 'Capricorn' },
+      { option: 'Aquarius', label: 'Aquarius' },
+      { option: 'Pisces', label: 'Pisces' },
+
     ],
     showConfig: {
-      label: 'Favorite cuisine',
+      label: 'Astrological Sign',
     },
     saveConfig: {
-      label: 'Favorite cuisine',
-      displayInSignUp: true,
+      label: 'Astrological Sign',
+      displayInSignUp: false,
       isRequired: true,
     },
-    userTypeConfig: {
-      limitToUserTypeIds: true,
-      userTypeIds: ['a', 'b', 'c'],
-    },
+    // userTypeConfig: {
+    //   limitToUserTypeIds: true,
+    //   userTypeIds: ['a', 'b', 'c'],
+    // },
   },
+ 
   {
-    key: 'canCook',
-    scope: 'public',
-    schemaType: 'boolean',
-    showConfig: {
-      label: 'Can you cook?',
-    },
-    saveConfig: {
-      label: 'Can you cook?',
-      displayInSignUp: true,
-      isRequired: true,
-      placeholderMessage: 'Select...',
-    },
-    userTypeConfig: {
-      limitToUserTypeIds: true,
-      userTypeIds: ['a', 'b', 'c'],
-    },
-  },
-  {
-    key: 'numberOfCookbooks',
-    scope: 'public',
-    schemaType: 'long',
-    showConfig: {
-      label: 'How many cookbooks do you have',
-    },
-    saveConfig: {
-      label: 'How many cookbooks do you have',
-      displayInSignUp: true,
-      isRequired: true,
-    },
-    userTypeConfig: {
-      limitToUserTypeIds: true,
-      userTypeIds: ['a', 'b', 'c'],
-    },
-  },
-  {
-    key: 'kitchenDescription',
+    key: 'pronouns',
     scope: 'public',
     schemaType: 'text',
     showConfig: {
-      label: 'Description of your kitchen',
+      label: 'Pronouns',
     },
     saveConfig: {
-      label: 'Description of your kitchen',
+      label: 'Pronouns',
       displayInSignUp: true,
       isRequired: true,
-      placeholderMessage: 'Describe your kitchen...',
+      placeholderMessage: 'Pronoun',
     },
-    userTypeConfig: {
-      label: 'Description of your kitchen',
-      limitToUserTypeIds: true,
-      userTypeIds: ['a', 'b', 'c'],
-    },
+    // userTypeConfig: {
+    //   limitToUserTypeIds: true,
+    //   userTypeIds: ['a', 'b', 'c'],
+    // },
   },
-  {
-    key: 'arrivalInstructions',
-    scope: 'protected',
-    schemaType: 'text',
-    showConfig: {
-      label: 'How do people arrive at your kitchen?',
-    },
-    saveConfig: {
-      label: 'How do people arrive at your kitchen?',
-      displayInSignUp: true,
-      isRequired: true,
-    },
-    userTypeConfig: {
-      limitToUserTypeIds: false,
-      userTypeIds: ['a', 'b', 'c'],
-    },
-  },
-  {
-    key: 'dietaryPreferences',
-    scope: 'public',
-    schemaType: 'multi-enum',
-    enumOptions: [
-      { option: 'vegan', label: 'Vegan' },
-      { option: 'vegetarian', label: 'Vegetarian' },
-      { option: 'gluten-free', label: 'Gluten free' },
-      { option: 'dairy-free', label: 'Dairy free' },
-      { option: 'nut-free', label: 'Nut free' },
-      { option: 'egg-free', label: 'Egg free' },
-      { option: 'low-carb', label: 'Low carb' },
-      { option: 'low-fat', label: 'Low fat' },
-    ],
-    showConfig: {
-      label: 'Dietary preferences',
-    },
-    saveConfig: {
-      displayInSignUp: true,
-      label: 'Dietary preferences',
-      isRequired: true,
-    },
-    userTypeConfig: {
-      limitToUserTypeIds: true,
-      userTypeIds: ['a', 'b', 'c'],
-    },
-  },
+ 
+
+
 ];
 
 /////////////////////////////////////
@@ -173,21 +107,21 @@ export const userFields = [
  * - Update configHelpers.js mergeUserConfig to pass user types to the validUserFields function
  */
 
-export const userTypes = [
-  {
-    userType: 'a',
-    label: 'Seller',
-  },
-  {
-    userType: 'b',
-    label: 'Buyer',
-  },
-  {
-    userType: 'c',
-    label: 'Guest',
-  },
-  {
-    userType: 'd',
-    label: 'Host',
-  },
-];
+// export const userTypes = [
+//   {
+//     userType: 'a',
+//     label: 'Seller',
+//   },
+//   {
+//     userType: 'b',
+//     label: 'Buyer',
+//   },
+//   {
+//     userType: 'c',
+//     label: 'Guest',
+//   },
+//   {
+//     userType: 'd',
+//     label: 'Host',
+//   },
+// ];

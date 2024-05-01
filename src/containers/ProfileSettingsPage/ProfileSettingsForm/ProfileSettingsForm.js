@@ -320,7 +320,12 @@ class ProfileSettingsFormComponent extends Component {
                 </div>
                 
               </div>
-              <div className={css.sectionContainer}>
+              <div className={classNames(css.sectionContainer)}>
+                {userFieldProps.map(fieldProps => (
+                  <CustomExtendedDataField {...fieldProps} />
+                ))}
+              </div>
+              {/* <div className={css.sectionContainer}>
                 <H4 as="h2" className={css.sectionTitle}>
                  Pronouns
                 </H4>
@@ -338,8 +343,8 @@ class ProfileSettingsFormComponent extends Component {
                   />
                 </div>
                 
-              </div>
-              <div className={css.sectionContainer}>
+              </div> */}
+              {/* <div className={css.sectionContainer}>
                 <H4 as="h2" className={css.sectionTitle}>
                   Astrological Sign
                 </H4>
@@ -357,7 +362,7 @@ class ProfileSettingsFormComponent extends Component {
                   />
                 </div>
                 
-              </div>
+              </div> */}
               <div className={classNames(css.sectionContainer)}>
                 <H4 as="h2" className={css.sectionTitle}>
                   <FormattedMessage id="ProfileSettingsForm.bioHeading" />
@@ -374,11 +379,7 @@ class ProfileSettingsFormComponent extends Component {
                   <FormattedMessage id="ProfileSettingsForm.bioInfo" values={{ marketplaceName }} />
                 </p>
               </div>
-              <div className={classNames(css.sectionContainer, css.lastSection)}>
-                {userFieldProps.map(fieldProps => (
-                  <CustomExtendedDataField {...fieldProps} />
-                ))}
-              </div>
+            
               {submitError}
               <Button
                 className={css.submitButton}
