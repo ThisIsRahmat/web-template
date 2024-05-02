@@ -17,6 +17,7 @@ import {
   Button,
   FieldSelect,
   FieldTextInput,
+  LinkTextInput,
   Heading,
   CustomExtendedDataField,
 } from '../../../../components';
@@ -376,8 +377,29 @@ const EditListingDetailsFormComponent = props => (
                 })
               )}
             />
+
+       
           ) : null}
 
+         {showDescription ? (
+            <LinkTextInput
+              id={`${formId}description`}
+              name="description"
+              className={css.description}
+              type="textarea"
+              label={intl.formatMessage({ id: 'EditListingDetailsForm.description' })}
+              placeholder={intl.formatMessage({
+                id: 'EditListingDetailsForm.descriptionPlaceholder',
+              })}
+              validate={required(
+                intl.formatMessage({
+                  id: 'EditListingDetailsForm.descriptionRequired',
+                })
+              )}
+            />
+
+       
+          ) : null}
           {showListingFields ? (
             <AddListingFields
               listingType={listingType}
